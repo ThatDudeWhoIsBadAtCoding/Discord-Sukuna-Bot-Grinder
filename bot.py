@@ -7,9 +7,9 @@ from battler import Battler
 SUKUNA_ID = 1251024513487863921
 
 class Selfbot(discord.Client):
-    def __init__(self, base_channel, prefix):
+    def __init__(self, base_channel, id, prefix):
         super().__init__()
-        self.id = 1214908731180191758
+        self.id = id
         self.activate_channel_id = base_channel
         self.prefix = prefix
         self.battler = None
