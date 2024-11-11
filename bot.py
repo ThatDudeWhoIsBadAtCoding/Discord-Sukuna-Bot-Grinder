@@ -27,10 +27,13 @@ class Selfbot(discord.Client):
     async def on_message(self, message):
         if "switch" not in message.content and  message.channel.id != self.activate_channel_id: return
 
-        if message.author.id == SUKUNA_ID and self.battler.battling and message.embeds:
-            await asyncio.sleep(2)
-            self.battler.wins += 1
-            await self.battler.fight_battle(True)
+        try:
+            if message.author.id == SUKUNA_ID and self.battler.battling and message.embeds:
+                await asyncio.sleep(2)
+                self.battler.wins += 1
+                await self.battler.fight_battle(True)
+        except AttributeError:
+            pass
 
         if not self.check_if_me(message): return
 
