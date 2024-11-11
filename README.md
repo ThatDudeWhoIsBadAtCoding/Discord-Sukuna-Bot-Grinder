@@ -11,5 +11,5 @@ Features: Auto-battler (for now), feel free to suggest any additions
 HOW TO USE:
 
 1. Download Project
-2. Input your **discord token** and **base_channel_id** in `config.json`
-3. Use the `<@ping_self_> help` command (ping yourself followed by space and 'help')
+2. Input your **discord token**, **prefix** and **base_channel_id** in `config.json`
+3. Use the `prefix help` command (prefix followed by space and 'help')
