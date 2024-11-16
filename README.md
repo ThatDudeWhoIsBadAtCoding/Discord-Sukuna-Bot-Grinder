@@ -31,4 +31,5 @@ You can use `prefix untrack, card_id, ace_number` to untrack the ace
 You can also use `prefix sacrifice` at any time to see how many non-important shards you have pulled so you can sacrifice them! Use `prefix unlog` to stop the logger
 
 **How is this better than autosac?** 
+
 Simple, no limit on how much you can work towards...unlike the limit of 20 cards on autosac wishlish, plus you have a clear idea of what you are working towards!
