@@ -2,6 +2,5 @@
     "token": "",
     "base_channel_id": 0,
     "user_id": 0,
-    "prefix": "sukuna",
-    "install_needed": false
+    "prefix": "sukuna"
 }
