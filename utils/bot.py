@@ -63,7 +63,7 @@ class Selfbot(discord.Client):
         try:
             if message.author.id == SUKUNA_ID and self.logger.logging and "Looks like you already own this card" in message.content and message.channel.id == self.activate_channel_id:
                 c = message.content.split("**")[-2].split("> ")[-1]
-                amount = c.split("`")[-2].split(": ")[-1]
+                amount = message.content.split("`")[-2].split(": ")[-1]
                 parent_card = self.logger.log(c, amount)
                 if parent_card:
                     await message.channel.send(f"Oh, it seems like you needed this shard for {parent_card} Ace, cool....these are the sacrifices so far `{self.logger.sacrifices if self.logger.sacrifices else "Nothing lol"}`")
@@ -95,8 +95,7 @@ class Selfbot(discord.Client):
             case "tree":
                 tree = Card_Tree(inputs[0], inputs[1])
                 # \u2014
-                e = tree.get_card_tree()
-                await message.channel.send(f"```{e}```")
+                await message.channel.send(f"```{tree.get_card_tree()}```")
             case "settle":
                 self.settle(message.channel.id)
                 await message.channel.send(f"Successfully altered base ID to `{message.channel.name}` (ID = `{message.channel.id}`)")
