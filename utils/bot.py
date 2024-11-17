@@ -38,7 +38,7 @@ class Selfbot(discord.Client):
         print(f'Logged on as {self.user}!')
 
     async def on_message_edit(self, m1, m2):
-        if m2.author.id == SUKUNA_ID and "lost" in m2.content and m2.channel.id == self.activate_channel_id and self.id in m2.content:
+        if m2.author.id == SUKUNA_ID and "lost" in m2.content and m2.channel.id == self.activate_channel_id and str(self.id) in m2.content:
             await asyncio.sleep(2)
             self.battler.losses += 1
             await self.battler.fight_battle(True)

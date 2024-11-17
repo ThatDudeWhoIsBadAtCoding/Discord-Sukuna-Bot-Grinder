@@ -1,6 +1,6 @@
 import discord
 import discord.utils
-import subprocess, json
+import json
 from utils.bot import Selfbot, SUKUNA_ID
 
 json_file = json.load(open("config.json"))
