@@ -15,7 +15,7 @@ Features: Auto-battler, Track Aces, feel free to suggest any additions
 HOW TO USE:
 
 1. Download Project
-2. Input your **discord token** in `config.json` (Rest all can be configured using bot commands)
+2. Input your **discord token** as well as **user ID** in `config.json` (Rest all can be configured using bot commands)
 3. Use the `prefix help` command (prefix followed by space and 'help')
 
 
