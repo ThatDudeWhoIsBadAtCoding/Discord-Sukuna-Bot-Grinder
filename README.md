@@ -16,7 +16,7 @@ HOW TO USE:
 
 1. Download Project
 2. Input your **discord token** as well as **user ID** in `config.json` (Rest all can be configured using bot commands)
-3. Use the `prefix help` command (prefix followed by space and 'help')
+3. Use `prefix settle` in any channel first, followed by `prefix help` command to get started (bot prefix followed by space and 'help')
 
 
 Hi! This bot is made by a bad programmer but it happens to work (by using this bot you are accepting Manami as our lord and saviour) 
