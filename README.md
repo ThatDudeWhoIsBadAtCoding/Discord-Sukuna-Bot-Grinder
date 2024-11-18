@@ -10,7 +10,7 @@ IF YOU ARE DOWNLOADING Discord.py-self USE THE FOLLOWING COMMAND (NOT `pip insta
 `pip install -U --force-reinstall git+https://github.com/dolfies/discord.py-self.git`
 
 
-Features: Auto-battler, Track Aces, feel free to suggest any additions
+Features: Auto-battler, Track Aces, Auto-gambler (lmao) feel free to suggest any additions
 
 HOW TO USE:
 
@@ -27,6 +27,7 @@ You can also use `prefix stop` while battling which stops the auto-battler at an
 You can use `prefix untrack, card_id, ace_number` to untrack the ace
 3. A pull logger! This is why I added the tracker, use `prefix log` before you start pulling and the bot will tell you when you get a shard you need!
 You can also use `prefix sacrifice` at any time to see how many non-important shards you have pulled so you can sacrifice them! Use `prefix unlog` to stop the logger
+4. Feature for fun, autogambler. Command is `prefix gamble, amount` it literally just gambles that many times. Funny story I actually won a jackpot while testing this feature so it may be blessed
 
 **How is this better than autosac?** 
 
