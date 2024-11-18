@@ -4,6 +4,7 @@ from utils.battler import Battler
 from utils.fetch_cards import Card_Tree
 import json
 from utils.logger import Logger
+from utils.gambler import Gambler
 
 
 SUKUNA_ID = 1251024513487863921
@@ -123,6 +124,9 @@ class Selfbot(discord.Client):
                 old_prefix = self.prefix
                 self.change_prefix(inputs[0])
                 await message.channel.send(f"Successfully chaged from {old_prefix} to {self.prefix}")
+            case "gamble":
+                gambler = Gambler(message.channel, int(inputs[0]))
+                await gambler.activate()
 
         
     def check_if_me(self, message):
