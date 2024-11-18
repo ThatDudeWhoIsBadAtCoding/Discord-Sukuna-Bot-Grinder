@@ -1,4 +1,5 @@
 from io import StringIO
+import pyperclip
 
 class Logger():
     def __init__(self, pulls=9):
@@ -12,6 +13,7 @@ class Logger():
         sacrifice_string = StringIO()
         for card in no_dupes:
             sacrifice_string.write(f"{card}: {self._sacrifices.count(card)}, ")
+        pyperclip.copy(sacrifice_string.getvalue()[:-2])
         return sacrifice_string.getvalue()[:-2]
     
     @sacrifices.setter

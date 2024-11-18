@@ -1,6 +1,11 @@
-import discord
-import discord.utils
-import json
+try:
+    import discord, pyperclip, requests, bs4
+    import discord.utils
+    import json
+except ModuleNotFoundError:
+    import subprocess
+    subprocess.check_call(['pip', 'install', '-r', "requirements.txt"])
+
 from utils.bot import Selfbot, SUKUNA_ID
 
 json_file = json.load(open("config.json"))

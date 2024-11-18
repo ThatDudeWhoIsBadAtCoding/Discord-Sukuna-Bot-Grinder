@@ -5,7 +5,6 @@ from utils.fetch_cards import Card_Tree
 import json
 from utils.logger import Logger
 
-# pip install -U --force-reinstall git+https://github.com/dolfies/discord.py-self.git
 
 SUKUNA_ID = 1251024513487863921
 
@@ -128,4 +127,3 @@ class Selfbot(discord.Client):
         
     def check_if_me(self, message):
         return message.author.id == self.id
-
