@@ -1,10 +1,11 @@
 try:
-    import discord, pyperclip, requests, bs4
+    import discord, pyperclip, requests, bs4, json
     import discord.utils
-    import json
 except ModuleNotFoundError:
     import subprocess
+    print("some packages were missing, installing all requirements")
     subprocess.check_call(['pip', 'install', '-r', "requirements.txt"])
+    import discord, json, discord.utils
 
 from utils.bot import Selfbot, SUKUNA_ID
 
