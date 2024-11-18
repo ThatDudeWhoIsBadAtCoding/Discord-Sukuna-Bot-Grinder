@@ -54,7 +54,7 @@ class Battler():
             await asyncio.sleep(4)
             return
         
-        elif not self.battling:
+        elif not self.battling: 
             await asyncio.sleep(4)
             await self.battle_command.__call__()
             self.battling = True

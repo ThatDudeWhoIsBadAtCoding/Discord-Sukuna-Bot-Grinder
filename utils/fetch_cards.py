@@ -2,9 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 
 
-CARD_ID = 4 # Sukuna card ID
-
-
 class Card_Tree():
     def __init__(self, id, master_ace):
 

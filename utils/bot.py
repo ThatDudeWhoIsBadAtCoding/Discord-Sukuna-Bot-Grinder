@@ -50,7 +50,7 @@ class Selfbot(discord.Client):
             if message.author.id == SUKUNA_ID and self.battler.battling and message.embeds:
                 await asyncio.sleep(2)
                 self.battler.wins += 1
-                await self.battler.fight_battle(True)
+                await self.battler.fight_battle(True) 
         except AttributeError:
             pass
         try:
@@ -74,7 +74,7 @@ class Selfbot(discord.Client):
 
         if not message.content.startswith(self.prefix): return
 
-        command_ = "".join(message.content.split(" ")[1:])
+        command_ = "".join(message.content.split(" ")[1:]) 
         command_ = command_.split(",")
         command, inputs = command_[0], command_[1:]
         # prefix command, input1, input2....
@@ -125,7 +125,8 @@ class Selfbot(discord.Client):
                 self.change_prefix(inputs[0])
                 await message.channel.send(f"Successfully chaged from {old_prefix} to {self.prefix}")
             case "gamble":
-                gambler = Gambler(message.channel, int(inputs[0]))
+                channel = await self.fetch_channel(self.activate_channel_id)
+                gambler = Gambler(channel, int(inputs[0]))
                 await gambler.activate()
 
         
