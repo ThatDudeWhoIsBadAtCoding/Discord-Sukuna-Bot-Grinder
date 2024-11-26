@@ -3,7 +3,6 @@ import asyncio
 
 class Battler():
     def __init__(self, channel, tokens):
-        print(tokens)
         self.battle_command = 1255451462989774858
         self.battle_reset_command = 1255855746952724573
         self.channel = channel

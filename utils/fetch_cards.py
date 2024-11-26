@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 class Card_Tree():
     def __init__(self, id, master_ace):
 
@@ -13,11 +12,15 @@ class Card_Tree():
     def get_ace(self, cards, level):
         for card in cards[:-1]:
             text = card.get("alt")
-            if "Ace" in text and text[-1] == level:
+            if text is None:
+                continue
+            if "Ace" in text and text[-1] == str(level):
                 tree = card.parent.next_sibling
                 links = []
                 names = []
                 levels = []
+                if tree is None: continue
+
                 for c in tree.children:
                     n = c.find("a")
                     name = n.next_sibling.get_text()
@@ -55,7 +58,7 @@ class Card_Tree():
         resp = requests.get(url)
         soup = BeautifulSoup(resp.content, "html.parser") 
         links_ = soup.find_all("img")
-        self.name = links_[-1].next_sibling.get_text().split(" (")[0] 
+        self.name = links_[-3].next_sibling.get_text().split(" (")[0] 
 
 
     def get_card_tree(self, for_logger=False):
@@ -70,7 +73,7 @@ class Card_Tree():
             
         links_ = soup.find_all("img")
 
-        self.name = links_[-1].next_sibling.get_text().split(" (")[0] 
+        self.name = links_[-3].next_sibling.get_text().split(" (")[0] 
         
 
         self.tree = f"{self.name} Ace {self.ace} requires:-" if not for_logger else f"{self.id}-{self.name}-{self.ace}"
